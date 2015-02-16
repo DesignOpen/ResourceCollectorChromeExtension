@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 370px;
+  background-color: #e9e9e9;
+}
+
+#header {
+  background-color: #000;
+  background-image: url(icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 35px;
+  width: 100%;
+}
+
+#content {
+  margin: 15px;
+  padding: 0;
+}
+
+#errStatus {
+  color: #D52B2B;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+
+p.lead {
+  margin-top: 0;
+  font-size: 13px;
+  font-style: italic;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 5px;
+  display: block;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-size: 11px;
+  color: #666;
+}
+
+.hide {
+  display: none;
+}

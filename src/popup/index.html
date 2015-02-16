@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Focus</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id="header"></div>
+  <div id="content">
+    <div id="submissionLoading">
+      <p class="lead">Loading...</p>
+    </div>
+    <div id="submissionInfo" class="hide">
+      <h1>Design Resource Submission</h1>
+      <p class="lead">Thank you for your submission to Design Open!</p>
+      <input type="button" value="View Submission &raquo;" id="viewSubmission">
+    </div>
+    <div id="submissionForm" class="hide">
+      <h1>Submit Design Resource</h1>
+      <p class="lead">Contribute a design resource to Design Open.</p>
+      <input type="text" id="title" placeholder="Title">
+      <input type="url" id="url" placeholder="URL" spellcheck="false">
+      <select id="category" disabled>
+        <option>Loading categories...</option>
+      </select>
+      <input type="text" id="twitter" placeholder="@twitter" spellcheck="false">
+      <textarea id="description" placeholder="Description" rows="10"></textarea>
+      <div id="errStatus"></div>
+      <input type="submit" id="submit" value="Submit &raquo;">
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
