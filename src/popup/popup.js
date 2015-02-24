@@ -79,6 +79,10 @@ var app = {
         categoryEl.innerHTML = '';
         categoryEl.disabled = false;
         resp.forEach(function(category) {
+          // Capitalize first letter of each word
+          category = category.replace(/\w\S*/g, function(txt){
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+          });
           var optionEl = document.createElement("option");
           optionEl.text = category;
           categoryEl.add(optionEl);
