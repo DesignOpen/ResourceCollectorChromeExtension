@@ -118,6 +118,8 @@ var app = {
     var that = this;
     var submitEl = document.getElementById('submit');
     var errStatusEl = document.getElementById('errStatus');
+    var loadingEl = document.getElementById('loading');
+    loadingEl.style.display = 'block';
     submitEl.disabled = true;
     errStatusEl.innerHTML = '';
     chrome.storage.sync.set({twitter: document.getElementById('twitter').value});
@@ -131,7 +133,7 @@ var app = {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4) {
-        console.log();
+        loadingEl.style.display = 'none';
         var resp = JSON.parse(xhr.responseText);
         if(resp.success) {
           chrome.storage.sync.get({sites: new Object()}, function(items) {
