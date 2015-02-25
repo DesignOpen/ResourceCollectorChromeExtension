@@ -70,11 +70,6 @@ var app = {
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4) {
         var resp = xhr.responseText;
-        // Transform JSONP into JSON
-        resp = resp.replace(/^\s*functionCall\(\s*/, '{ "categories":')
-                   .replace(/\s*\);\s*$/,'}')
-                   .replace(/,\s*\]/g, "]")
-                   .replace(/\n/g, "");
         resp = JSON.parse(resp).categories;
         categoryEl.innerHTML = '';
         categoryEl.disabled = false;
@@ -89,7 +84,7 @@ var app = {
         });
       }
     };
-    xhr.open('GET', 'http://designopen.org/categories.js', true);
+    xhr.open('GET', 'http://designopen.org/categories.json', true);
     xhr.send();
   },
 
